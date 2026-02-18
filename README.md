@@ -93,14 +93,14 @@ Este escáner cuenta líneas, palabras y caracteres de una entrada.
 ```bash
 cd fb1.1
 flex fb1.1.l
-gcc lex.yy.c -o fb1.1 -lfl
-./fb1.1 texto.txt
+gcc lex.yy.c  -lfl
+./a.out
 ```
 
 También puede ejecutarse con entrada manual:
 
 ```bash
-./fb1.1
+./a.out
 ```
 
 (Escribir texto y finalizar con `Ctrl + D`).
@@ -150,8 +150,8 @@ Este programa reemplaza ciertas palabras por equivalentes definidos en reglas.
 ```bash
 cd fb1.2
 flex fb1.2.l
-gcc lex.yy.c -o fb1.2 -lfl
-echo "smart colour" | ./fb1.2
+gcc lex.yy.c -lfl
+echo "smart colour" | ./a.out
 ```
 
 ---
@@ -189,8 +189,8 @@ El escáner tokeniza operadores y números para una calculadora simple:
 ```bash
 cd fb1.3
 flex fbl1.3.l
-gcc lex.yy.c -o fb1.3 -lfl
-echo "2+3*5" | ./fb1.3
+gcc lex.yy.c -lfl
+echo "2+3*5" | ./a.out
 ```
 
 ---
@@ -330,8 +330,8 @@ Este ejemplo reemplaza Flex por un escáner escrito a mano:
 ```bash
 cd fbl1.6
 bison -d fb1-5.y
-gcc fb1-5.tab.c fb1-6.c -o fb1-6
-./fb1-6
+gcc fb1-5.tab.c fb1-6.c  
+./a.out
 ```
 
 ---
